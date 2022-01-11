@@ -1,13 +1,14 @@
 // bubble sort algorithm
 package bubblesort
 
-func BubbleStringSort(names []string) {
+func BubbleStringSort(names []string) []string {
 	var i int
 	for i = 0; i < len(names); i++ {
 		if !StringSweep(names, i) {
-			return
+			break
 		}
 	}
+	return names
 }
 
 func StringSweep(names []string, previousPass int) bool {
