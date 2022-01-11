@@ -17,12 +17,12 @@ func StringSweep(names []string, previousPass int) bool {
 	var swapped = false
 
 	for secondIndex < (n - previousPass) {
-		var firstNumber string = names[firstIndex]
-		var secondNumber string = names[secondIndex]
+		var firstName string = names[firstIndex]
+		var secondName string = names[secondIndex]
 
-		if firstNumber > secondNumber {
-			names[firstIndex] = secondNumber
-			names[secondIndex] = firstNumber
+		if greaterThan(firstName, secondName) {
+			names[firstIndex] = secondName
+			names[secondIndex] = firstName
 			swapped = true
 		}
 
@@ -30,4 +30,8 @@ func StringSweep(names []string, previousPass int) bool {
 		secondIndex++
 	}
 	return swapped
+}
+
+func greaterThan(a, b string) bool {
+	return a > b
 }
