@@ -1,7 +1,6 @@
 package binarysearch
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -10,7 +9,7 @@ func TestBinarySearch(t *testing.T) {
 	got := BinarySearch(nums, 4)
 	want := 3
 
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("got: %v | want: %v", got, want)
+	if got != want {
+		t.Errorf("got: %d | want: %d", got, want)
 	}
 }
