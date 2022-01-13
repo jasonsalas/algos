@@ -1,4 +1,3 @@
-// bubble sort algorithm
 package bubblesort
 
 func BubbleSort(numbers []int) []int {
